@@ -77,7 +77,7 @@
         // 1. Redirect to Homepage on Login Form Submit
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault(); // Stop default page refresh
-            // FIX: login.html is at the root, so it looks inside the pages/ folder
+            // FIX: index.html is at the root, so it looks inside the pages/ folder
             window.location.href = "pages/Homepage.html"; 
         });
 
