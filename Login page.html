@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Abel&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Travel Agency Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome to Escape Era</h1>
+        
+        <div id="loginSection">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Sign in to continue planning your next adventure.</p>
+            
+            <form id="loginForm">
+                <label for="email">Email Address</label>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <label for="password">Password</label>
+                <div class="form-group password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <i class="fa-solid fa-eye" id="togglePassword"></i>
+                </div>
+
+                <div class="remember-box">
+                    <label>
+                        <input type="checkbox" id="remember"> Remember Me
+                    </label>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <div class="bottom-text">
+                Don't have an account? <a href="#" id="showRegister">Register</a>
+            </div>
+        </div>
+
+        <div id="registerSection" style="display: none;">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join Escape Era and start exploring the world.</p>
+            
+            <form id="registerForm">
+                <label for="regName">Full Name</label>
+                <div class="form-group">
+                    <input type="text" id="regName" placeholder="Enter your full name" required>
+                </div>
+
+                <label for="regEmail">Email Address</label>
+                <div class="form-group">
+                    <input type="email" id="regEmail" placeholder="Enter your email" required>
+                </div>
+
+                <label for="regPassword">Password</label>
+                <div class="form-group password-wrapper">
+                    <input type="password" id="regPassword" placeholder="Create a password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Sign Up</button>
+            </form>
+
+            <div class="bottom-text">
+                Already have an account? <a href="#" id="showLogin">Login</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // 1. Redirect to Homepage on Login Form Submit
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop default page refresh
+            // FIX: login.html is at the root, so it looks inside the pages/ folder
+            window.location.href = "pages/Homepage.html"; 
+        });
+
+        // 2. Mock Registration Submit Action
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Account created successfully! Redirecting to your dashboard...");
+            window.location.href = "pages/Homepage.html";
+        });
+
+        // 3. Toggle between Login and Register views smoothly
+        const loginSection = document.getElementById('loginSection');
+        const registerSection = document.getElementById('registerSection');
+        
+        document.getElementById('showRegister').addEventListener('click', function(e) {
+            e.preventDefault();
+            loginSection.style.display = 'none';
+            registerSection.style.display = 'block';
+        });
+
+        document.getElementById('showLogin').addEventListener('click', function(e) {
+            e.preventDefault();
+            registerSection.style.display = 'none';
+            loginSection.style.display = 'block';
+        });
+
+        // 4. Password visibility toggle
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>

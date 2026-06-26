@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Escape Era team for customized travel planning.">
+    <meta name="author" content="Urvashi Kamble">
+
+    <!-- FIXED: Links out of pages/ folder into your dedicated contact.css -->
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    
+    <title>Contact Us | Escape Era</title>
+</head>
+
+<body>
+    <!-- Global Navigation Header Bar -->
+    <nav class="nav-container">
+        <h2 class="logo">Escape Era</h2>
+        <ul class="navlinks">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Homepage.html#a2">Escapes</a></li>
+            <li><a href="Homepage.html#a3">Reviews</a></li>
+            
+            <li><a href="contact.html" class="active">About</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Main Workspace Container -->
+    <main class="contact-wrapper">
+        <div class="contact-header">
+            <h2>Your Journey Begins Here</h2>
+            <p>Have questions about planning your custom itinerary? Drop our team a message below.</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Left Side: Interactive Input Form -->
+            <section class="form-card">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <div class="input-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contactEmail">Email Address</label>
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="5" placeholder="How can we help you plan your journey?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+
+            <!-- Right Side: Business Team Bios -->
+            <section class="team-card">
+                <h3>Our Team</h3>
+                
+                <div class="contact-flex-sidebar">
+    <div class="contact-card team-card">
+        <h3>Our Team</h3>
+        
+        <div class="team-profile-item">
+            <img src="../assets/creator1.jpg" alt="Sara" class="team-avatar" 
+                 width="70" height="70" 
+                 style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #01999F; flex-shrink: 0;">
+            <div class="team-info">
+                <h4>Sara Nek</h4>
+                <span class="team-role">Travel Experience Designer</span>
+                <p>Creates personalized itineraries and researches destinations to make every trip memorable.</p>
+            </div>
+        </div>
+
+        <div class="team-profile-item">
+            <img src="../assets/creator2.jpg" alt="Urvashi" class="team-avatar" 
+                 width="70" height="70" 
+                 style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #01999F; flex-shrink: 0;">
+            <div class="team-info">
+                <h4>Urvashi Kamble</h4>
+                <span class="team-role">Frontend Developer & Travel Planner</span>
+                <p>Designed and developed Escape Era, focusing on responsive design and user experience.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>s
+            </section>
+        </div>
+    </main>
+
+    <!-- Global Layout Base Footer -->
+    <footer class="global-footer">
+        <p>&copy; 2026 Escape Era. All rights reserved.</p>
+        
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! The Escape Era team will get back to you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

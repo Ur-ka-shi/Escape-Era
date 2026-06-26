@@ -1,0 +1,169 @@
+/* ==========================================================================
+   1. General Styling & Brand Foundation
+   ========================================================================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(135deg, #eef7ff, #ffffff);
+}
+
+/* ==========================================================================
+   2. Header (Unified Brand Theme)
+   ========================================================================== */
+.header {
+    background: #01999F;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   3. Container Layout
+   ========================================================================== */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   4. Card System & Animations
+   ========================================================================== */
+.card {
+    background: white;
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    transition: .35s;
+    cursor: pointer;
+    text-align: center;
+    max-width: 300px;
+    animation: fadeUp .8s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .18);
+}
+
+/* Card Image & Interactive Zoom */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.card:hover .card-img {
+    transform: scale(1.08);
+}
+
+/* Card Typography & Content */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #01999F; /* Standardized theme color */
+}
+
+.card-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.card-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.card-content ul li {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* ==========================================================================
+   5. Interactive Elements (Buttons)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #01999F;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #02797d;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. Footer
+   ========================================================================== */
+footer {
+    background: #01999F;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+/* ==========================================================================
+   7. Keyframes & Animation Profiles
+   ========================================================================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   8. Responsive Media Queries (Mobile Optimization)
+   ========================================================================== */
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+}
