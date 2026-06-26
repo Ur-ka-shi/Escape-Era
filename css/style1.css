@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background-image: url(/assets/homepagebg.webp);
+    background-image: url(../assets/homepagebg.webp);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
